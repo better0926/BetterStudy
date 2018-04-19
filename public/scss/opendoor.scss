@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import "fn";
+//开门大吉翻转
+section {
+    position: relative;
+    width: 228px;
+    height: 154px;
+    margin: 50px auto;
+    border: 1px solid lime;
+    background: url(../images/sliderbar3.png) 0 0 no-repeat;
+    perspective: 900px;
+    .door-l,
+    .door-r {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: lightpink;
+        transition: all 1s;
+    }
+    .door-l {
+        left: 0;
+        border-right: 1px solid lime;
+        transform-origin: left;  //按照左侧轴翻转
+    }
+    .door-r {
+        right: 0;
+        border-left: 1px solid lime;
+        transform-origin: right; //按照右侧轴翻转
+    }
+    //伪类添加圆圈门把
+    .door-l:before,
+    .door-r:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top:50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #f40;
+        cursor: pointer;
+    }
+    .door-l:before {
+        right: 5px;
+    }
+    .door-r:before {
+        left: 5px;
+    }
+    //鼠标经过翻转
+    &:hover .door-l {
+        transform: rotateY(-135deg);
+    }
+     &:hover .door-r {
+        transform: rotateY(135deg);
+    }
+}

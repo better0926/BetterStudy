@@ -1,0 +1,29 @@
+// =easy-gradient ($bg, $alpha: false){
+//     @if ($alpha){
+//         $bg: rgba($bg, $alpha);
+//     }
+//     $top: lighten($bg, 5);
+//     $bottom: dark($bg, 5);
+//     @include background-image {
+//         linear-gradient($top, $bottom)
+//     }
+// }
+// .nav {
+//     margin: 20px {left: 0; right: 0;}
+//     @include easy-gradient (#ccc);
+//     a {color: blue; text-decoration: none;}
+// }
+header {
+    height: 50px;
+    background-color:pink;
+    line-height: 50px;
+    text-align: center;
+    color: red;
+}
+header {
+    height: 50px;
+    background-color:pink;
+    line-height: 50px;
+    text-align: center;
+    color: red;
+}

@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import "base";
+//颜色
+$bodybg         : #f3f5f7;
+$ftc            : #666666;
+$ft33           : #333333;
+$blue           : #00a4ff;
+$dark_blue      : #1c036c;
+$black_blue     : #13014b;
+$simple_blue    : #74beec;
+$blue9b         : #9bceea;
+$white          : #ffffff;
+$black          : #000000;
+$graybf         : #bfbfbf;
+$grayc6         : #c6c7c8;
+$smart_white    : #fafafa;
+$orange         : #ff7c2d;
+
+//行高 
+$lh2            :2;
+$lh3            :3;
+$lh34           :34px; 
+//字体大小
+$f18            :18px;
+$f16            :16px;
+$f15            :15px;
+$f14            :14px;
+$f12            :12px;
+$font-fm : 12px/1.5 'microsoft yahei',Arial, Verdana, "\5b8b\4f53";
+body {
+    background-color: $bodybg;
+    font: $font-fm;
+    color: $ftc;
+}
+.bdnone {border-bottom: 0;}
+.block {
+    display: block;
+}
+@mixin title-size{
+    width: 199px;
+    height: 41px;
+}
+@mixin padding-size {
+    padding: 0 20px;
+}
+.learn{
+    //----------header start
+    header{
+        height: 100px;
+        padding-top: 30px;
+        .title{
+            h1{
+                background: url(../images/logo.png) 0 0 no-repeat;
+                @include title-size;
+            }
+        }
+        .bl-nav{
+            @include padding-size;
+            font-size: 17px;
+            .nav li{
+                @include padding-size;
+                line-height: 30px;
+            }
+            a{
+                display: block;
+                color: $ftc;
+                &:hover{border-bottom: 2px solid $blue;}
+            }
+        }
+        .search{
+            .ipt{
+                width: 360px;
+                height: 40px;
+                border: 1px solid $blue;
+                margin-left: 100px ;
+            }
+            .but{
+                background: $blue  url(../images/fa-search.png) center center no-repeat;
+                width: 50px;
+                height: 40px;
+                border: none;
+            }
+        }
+        .user{
+            padding: 5px 0 0 30px;
+            .user-pic{
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }     
+            }
+            .user-name{
+                line-height: 26px;
+                text-indent: 6px;
+            }
+        }
+    }
+    //----------header end
+
+    //----------banner start
+    .bl-banner{
+        background-color: $dark_blue;
+        .banner{
+            height: 420px;
+
+            // banner 左边侧栏
+            .slider{
+                top: 0;
+                background-color: $black_blue;
+                .sliderbar{
+                    line-height: 44px;
+                    font-size: $font-fm;
+                    padding: 0 20px;
+                }
+                .bar-list{
+                    width: 190px;
+                    background: url(../images/arrow.png) 90% center no-repeat;
+                    a{  
+                        display: block;
+                        color: $white;
+                    }
+                &.current{
+                    background: url(../images/arrow-active.png) 90% center no-repeat;}    
+                &:hover{
+                    background: url(../images/arrow-active.png) 90% center no-repeat;
+                    a {color: $blue;}
+                }
+                }    
+            }
+
+            // banner 右边侧栏
+            .slider-r{
+                top:48px;
+                right:0;
+                .right-tl{
+                    line-height: 50px;
+                    font-weight: 700;
+                    background-color: $blue9b;
+                    font-size: $f18;
+                    color: $white;
+                }
+                .right-learn{
+                    padding: 12px 16px;
+                    background-color: $white;
+                    .right-info{border-bottom: 1px dashed $ftc;
+                        .right-current{
+                            color: $blue;
+                        }
+                    }
+                    .info-r{
+                        font-size: $f16;
+                        line-height: 20px;
+                        color: $ftc;
+                    }
+                    .info-down{
+                        padding-bottom: 8px;
+                        font-size: $f12;
+                        color: $ft33;
+                    }
+                } 
+                .more-class{
+                    .list-more{
+                        border: 1px solid $blue;
+                        font-weight: 700;
+                        line-height: 38px;
+                        font-size: $f16;
+                        color: $blue;
+                        transition: all 1s;
+                    &:hover {
+                    background-color: blue;
+                    color: #fff;
+                }    
+                    }   
+                }
+            }
+            .bl-dot{
+                bottom: 34px;  
+                .list{
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    margin-right: 16px;
+                    background-color: $smart_white;
+                &：last-child{ margin-right: 0;}
+                &.dot-current{
+                    background-color: $simple_blue;width:20px;border-radius: 10px;}   
+                }      
+            }
+        }
+    }
+    //----------banner end
+
+    //----------二级导航 sec-one start e2e3e5
+    .sec-one{
+        margin: 8px auto 16px;
+        background-color: $white;
+        box-shadow: 0 9px 10px #dcdee0;
+        .sec-nav{
+            .sec-item{
+                line-height: 60px;
+                .sec-wrap{
+                    padding:0 34px;
+                    text-align: center;
+                    border-right: 1px solid $graybf;
+                    color: $black;
+                    font-weight: 400;
+                    font-size: 14px;
+                &.sec-li{border-right: none;}  
+                &.hobby{color: $blue;}  
+                &.sec-current{color: $blue;} 
+                }  
+            &:hover .sec-wrap{
+                color: $ftc;
+            }       
+            }
+        }
+    }
+    //----------二级导航 end
+
+    //----------推荐列表 sec-two start
+    //公共列表
+    .sec-two{
+        margin-bottom: 40px;
+        .sec-two__title{
+            font-size: $f18;
+            line-height: 40px;
+        .sec-two__r .more{
+            padding-right: 30px;
+            color: $grayc6;
+            font-size: $f12;
+            }
+        }
+        .sec-two__item{
+            .sec-two__bar{
+                margin-right: 15px;
+                height: 391px;
+            }
+            .md-bar{
+                width: 957px;
+                height: 100px;
+                margin-bottom: 21px;
+            }
+           .two-wrap{
+            width: 228px;
+            height: 270px;
+            margin: 5px 15px 15px 0;
+            // margin-bottom: 15px;
+            // margin-right: 15px;
+            background-color: $white;
+            transition: all .2s;
+            &:nth-child(5n){
+                margin-right: 0;}
+            .list-hot{
+                background: url(../images/hot.png) center center no-repeat;
+                width: 40px;
+                height: 24px;
+                top: 0;
+                right: 0;
+            }
+            &:hover {
+                margin-top: 2px;
+                box-shadow: 0 6px 5px rgba(0,0,0,.2);
+            }
+            .two-img{
+                height: 158px;}
+            .bl-pro{
+                padding: 12px 22px;
+                font-size: $f12;
+                line-height: 2;
+                color: $black;
+                .two-info2{
+                    line-height: 30px;
+                    color: $grayc6;
+                    .hot{
+                        color:$orange;
+                    }
+                }
+            }
+            }
+            .wraper{
+                margin-bottom: 0;
+            &:nth-child(4n){margin-right: 0;}    
+            }
+        }
+        //公共列表结束
+
+        //公共列表3
+        .sec-bl__three{
+            margin-bottom: 15px;
+            .sec-two_l{
+                width:320px;
+            }
+            .ml-list{
+                padding: 0 32px;
+                font-size: $f14;
+                .ml-list__info{
+                    color: $grayc6;
+                &.ml-current{
+                    color: $blue;}
+                }
+            &:hover {
+                .ml-list__info{
+                    color: $blue;}   
+                }    
+            }   
+        }
+    }
+    //----------推荐列表 end
+
+    //footer start
+    footer{
+        padding: 30px 0 30px 22px;
+        height: 418px;
+        background-color: $white;
+        .footer-l{
+            .ft-title{
+                @include title-size;
+                margin-bottom: 20px;
+            }
+            .ft-text{
+               margin-top: 20px;
+               line-height: 2;
+                font-size: $f12;
+                color: $ftc;
+            }
+            .download{
+                margin-top: 20px;
+                width: 120px;
+                line-height: 34px;
+                border: 1px solid $blue;
+                .load{color: $blue;font-size: $f16;}
+            }
+        }
+        .footer-r{
+            font-size: $f16;
+            line-height: $lh34;
+            .footer-info__title{color: $ft33;}
+            dl{
+                width: 228px;
+                dd{
+                    font-size: $f12;
+                    line-height: $lh3;
+                    .footer-info__item{color: $ftc;}
+                }
+            }    
+        }
+    }
+
+    //footer end
+}

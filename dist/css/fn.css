@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+:focus {
+  outline: 0; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: none; }
+
+table {
+  border-collapse: 0;
+  border-spacing: 0; }

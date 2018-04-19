@@ -1,0 +1,110 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+:focus {
+  outline: 0; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: none; }
+
+table {
+  border-collapse: 0;/*单元格与单元格之间的距离*/
+  border-spacing: 0; /*内容与单元格之间的距离*/}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1;
+  color: black;
+  background-color: white; }
+
+ul,
+ol {
+  list-style-type: none; }
+
+table {
+  border-collapse: 0;
+  border-spacing: 0;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+/*版心*/
+.contain {
+  width: 980px;
+  margin: 0 auto; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.con {
+  width: 1000px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 0 }
+
+/*浮动*/
+.cf {
+  *zoom: 1; }
+/*官方推荐两个冒号，但是两个冒号兼容性不好，所以可以使用一个冒号*/
+.cf::after，
+.cf::before {
+  content: '';
+  display: block;
+  clear: both; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*图片垂直居中 套两层div，最外层div .bl-just设置 display:table*/
+.bl-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+
+/*定位 居中处理*/
+.abs {
+  position: absolute; }
+
+.rel {
+  position: relative; }
+
+/*垂直居中*/
+.abs.centerY {
+  top: 50%;
+  transform: translateY(-50%); }
+
+/*水平居中*/
+.abs.centerX {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.fix {
+  position: fixed; }
+
+.align-center {
+  text-align: center; }
+
+.curs {
+  cursor: pointer; }

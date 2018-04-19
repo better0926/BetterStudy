@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+:focus {
+  outline: 0; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: none; }
+
+table {
+  border-collapse: 0;
+  border-spacing: 0; }
+
+section {
+  position: relative;
+  width: 228px;
+  height: 154px;
+  margin: 50px auto;
+  border: 1px solid lime;
+  background: url(../images/sliderbar3.png) 0 0 no-repeat;
+  perspective: 900px; }
+  section .door-l,
+  section .door-r {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: lightpink;
+    transition: all 1s; }
+  section .door-l {
+    left: 0;
+    border-right: 1px solid lime;
+    transform-origin: left; }
+  section .door-r {
+    right: 0;
+    border-left: 1px solid lime;
+    transform-origin: right; }
+  section .door-l:before,
+  section .door-r:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #f40;
+    cursor: pointer; }
+  section .door-l:before {
+    right: 5px; }
+  section .door-r:before {
+    left: 5px; }
+  section:hover .door-l {
+    transform: rotateY(-135deg); }
+  section:hover .door-r {
+    transform: rotateY(135deg); }

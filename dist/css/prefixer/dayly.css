@@ -1,0 +1,285 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+:focus {
+  outline: 0; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: none; }
+
+table {
+  border-collapse: 0;
+  border-spacing: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img, button, input {
+  border: 0; }
+
+em, i, u {
+  font-style: normal; }
+
+body {
+  font: 12px/1.5 'microsoft yahei',Arial, Verdana, "\5b8b\4f53";
+  color: #666; }
+
+h1 {
+  font-size: 0; }
+
+a {
+  color: #666;
+  text-decoration: none;
+  font-family: 'microsoft yahei'; }
+
+li {
+  list-style: none; }
+
+/* 版心公共类 */
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.contain {
+  width: 1140px;
+  margin: 0 auto; }
+
+.con {
+  width: 1000px;
+  margin: 0 auto; }
+
+/*浮动*/
+.cf {
+  *zoom: 1; }
+
+/*官方推荐两个冒号，但是两个冒号兼容性不好，所以可以使用一个冒号*/
+.cf:after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: height;
+  height: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*图片垂直居中 套两层div，最外层div .bl-just设置 display:table*/
+.bl-just {
+  display: table; }
+
+.bl-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+
+/*定位 居中处理*/
+.abs {
+  position: absolute; }
+
+.rel {
+  position: relative; }
+
+/*垂直居中 方法一*/
+/*.abs.centerY {
+  top: 50%;
+  transform: translateY(-50%); }*/
+/*水平居中*/
+/*.abs.centerX {
+  left: 50%;
+  transform: translateX(-50%); }
+.abs.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}*/
+/*水平垂直居中 方法二*/
+.center {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.fix {
+  position: fixed; }
+
+.align-center {
+  text-align: center; }
+
+.curs {
+  cursor: pointer; }
+
+/*input默认边框样式*/
+.otline {
+  outline: none; }
+
+/*单行文字溢出省略显示*/
+.txt-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+table {
+  border-collapse: 0;
+  /*单元格与单元格之间的距离*/
+  border-spacing: 0;
+  /*内容与单元格之间的距离*/ }
+
+.b7 {
+  font-weight: 700; }
+
+.b4 {
+  font-weight: 400; }
+
+/*行高设置*/
+.line-20 {
+  line-height: 20px; }
+
+.line-24 {
+  line-height: 24px; }
+
+.line-30 {
+  line-height: 30px; }
+
+.line-32 {
+  line-height: 32px; }
+
+.line-36 {
+  line-height: 36px; }
+
+/*字体大小*/
+.ft-14 {
+  font-size: 14px; }
+
+.ft-16 {
+  font-size: 16px; }
+
+.ft-18 {
+  font-size: 18px; }
+
+.ft-20 {
+  font-size: 20px; }
+
+.ft-24 {
+  font-size: 24px; }
+
+/*字体颜色*/
+.color-f {
+  color: #fff; }
+
+.color-c {
+  color: #ccc; }
+
+.color-3 {
+  color: #333; }
+
+.color-6 {
+  color: #666; }
+
+.color-9 {
+  color: #999; }
+
+.color-de {
+  color: #dedede; }
+
+.m-color {
+  color: #c81623; }
+
+/*上下左右距离微调 */
+.ml-5 {
+  margin-left: 5px; }
+
+.mr-5 {
+  margin-right: 5px; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.ml-10 {
+  margin-left: 10px; }
+
+.mr-10 {
+  margin-right: 10px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mb-10 {
+  margin-bottom: 1px; }
+
+.ml-20 {
+  margin-left: 20px; }
+
+.mr-20 {
+  margin-right: 20px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.pl-5 {
+  padding-left: 5px; }
+
+.pr-5 {
+  padding-right: 5px; }
+
+.pt-5 {
+  padding-top: 5px; }
+
+.pb-5 {
+  padding-bottom: 5px; }
+
+.pl-10 {
+  padding-left: 10px; }
+
+.pr-10 {
+  padding-right: 10px; }
+
+.pt-10 {
+  padding-top: 10px; }
+
+.pb-10 {
+  padding-bottom: 10px; }
+
+.pl-20 {
+  padding-left: 20px; }
+
+.pr-20 {
+  padding-right: 20px; }
+
+.pt-20 {
+  padding-top: 20px; }
+
+.pb-20 {
+  padding-bottom: 20px; }
+
+img {
+  vertical-align: top; }
+
+header {
+  height: 100px;
+  background: url(../images/dayly/headerBg.gif) repeat-x; }
